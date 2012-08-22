@@ -1,0 +1,23 @@
+git pull
+git commit -m "mensaje"
+git push
+git add
+
+git add -a (agrega todo)
+
+git commit
+
+git merge (une las versiones)
+
+git status
+git --help
+
+git reset head nombre.ext
+git log
+
+
+carpetas
+
+managed->enagement/development/process
+unmanaged
+
