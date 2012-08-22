@@ -4,6 +4,14 @@ git add "nombre del archivo": Subimos el archivo
 
 git reset head "nombre archivo":  para que no agregue un archivo
 
+git commit -m "mensaje que querramos poner"
+
+git pull: traigo los cambios que hice
+
+git push: subimos al servidor
+
+git log: tira los cambios  de los usuarios
+
 
 
 
