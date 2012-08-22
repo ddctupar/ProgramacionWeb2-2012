@@ -1,3 +1,4 @@
 <?php
-echo "Hola";
+$msg = 'Hola';
+echo msg;
 ?>
