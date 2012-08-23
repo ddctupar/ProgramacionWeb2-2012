@@ -1,0 +1,104 @@
+.contenedor {
+	width:900px;
+	overflow: hidden;
+	display: block;
+	float: left;
+	margin-top: 20px;
+	margin-left: -15px;
+	overflow:hidden;
+}
+.prdDesc{
+	float: left;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	position: relative;
+	padding-left: 15px;
+	padding-top: 30px;
+	overflow:hidden;
+    width:90%;
+	background-color:#09F;
+}
+.txtdescrip {
+	font-size:15px;
+	font-family: "Trebuchet MS";
+	margin-top:auto;
+	color:#CCC;
+	position:relative;
+	text-align: center;
+}
+
+.txttitulo {
+	font-size:20px;
+	font-family: "Trebuchet MS";
+	text-align: right;
+	color: white;
+}
+.extendida {
+	font-size:18px;
+	font-family: "Trebuchet MS";
+	font-weight:bold;
+	color: #003;
+	float:right;
+	margin-top: 16px;
+}
+
+.columnaizq {
+float:left;
+height:100%;
+width:100%;
+}
+
+.columnader {
+float:right;
+height:50%;
+width:50%;
+}
+
+.menucat {
+	font-size:18px;
+	font-family: "Trebuchet MS";
+	font-weight:bold;
+	color:#039;
+	background-color:#FFF;
+	border:#039;
+	border:double;
+	text-align: center;
+	margin-top:30px;
+}
+
+.txt {
+	font-size:11px;
+	font-family: "Trebuchet MS";
+	font-weight:bold;
+	color:#039;
+	text-align:center;
+}
+.producto {
+height:80%;
+width:100%;
+align:top;
+}
+
+.clear {
+	clear: both;
+}
+
+img { 
+  width: 250px;
+  height: 200px;
+	  float: left;
+
+}
+
+imgrande { 
+  width: 250px;
+  height: 200px;
+	  float: left;
+
+}
+imagen {
+	  float: left;
+	    width: 200px;
+  height: 100px;
+
+}

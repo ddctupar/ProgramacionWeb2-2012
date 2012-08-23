@@ -1,0 +1,147 @@
+* { padding: 0; margin: 0; }
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	background-image: url(images/fondito.jpg); 
+	background-repeat: repeat-x;
+	background-position: center top;
+	background-color: #cae4fb;
+}
+
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+
+#navegacion {
+ background: url(images/2col.gif);
+ margin-bottom: 0px;
+ overflow: auto; 
+ width: 100%
+}
+
+
+#header {
+ width: 902px;
+ padding: 10px;
+ height: 120px;
+ margin: 0px 0px 0px 0px;
+ background-image:url('images/titular.png');
+ 
+}
+
+
+/* Imagenes de cabecera para cada seccion*/
+#image-seccion-portada{
+ color: #333;
+ width: 902px;
+ padding: 10px;
+ height: 180px;
+ margin: 0px 0px 0px 0px;
+ background-image:url('images/portada.png');
+}
+#image-seccion-productos{
+ color: #333;
+ width: 902px;
+ padding: 10px;
+ height: 180px;
+ margin: 0px 0px 0px 0px;
+ background-image:url('images/productos.png');
+}
+#image-seccion-articulos{
+ color: #333;
+ width: 902px;
+ padding: 10px;
+ height: 180px;
+ margin: 0px 0px 0px 0px;
+ background-image:url('images/articulos.png');
+}
+#image-seccion-contacto{
+ color: #333;
+ width: 902px;
+ padding: 10px;
+ height: 180px;
+ margin: 0px 0px 0px 0px;
+ background-image:url('images/contacto.png');
+}
+
+/* Fin de Imagenes de cabecera para cada seccion*/
+
+#columnder { 
+ display: inline;
+ color: #333;
+ margin:10px;
+ padding:0;
+ width: 195px;
+ float: right;
+}
+#contenido { 
+ float: left;
+ color: #333;
+ margin:10px;
+ padding:0;
+ width: 683px;
+ display: inline;
+ position: relative;
+}
+
+#footer { 
+ width: 902px;
+ height: 40px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+text-align:center;
+ clear: both;
+ color: #333;
+ background: #208dea;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}
+
+#menu{
+width: 100%;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:15px;
+color:#ffffff;
+background-color: #333;
+margin: 93px 0px 0px 10px;
+ }
+
+#menu ul{
+margin: 0; padding: 0;
+float: right;}
+
+#menu ul li{
+display: inline;}
+
+#menu ul li a{
+text-decoration: none;
+color:#ffffff;
+float: left; 
+background-color: #0042ff;
+padding: 10px 15px;
+ }
+
+#menu ul li a:visited
+{
+color:#ffffff;
+}
+
+#menu ul li a:hover, .menu ul li .current
+{
+color: #0042ff;
+background-color:#fff;
+}
+.relacionado{
+	font-size:16px;
+	font-family: "Trebuchet MS";
+	margin-top:auto;
+	color:#006;
+	position:relative;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}

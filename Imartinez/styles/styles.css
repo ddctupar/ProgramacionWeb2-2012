@@ -1,0 +1,161 @@
+*{
+	padding:0;
+	margin:0;
+	border:0;
+}
+#container{
+	width: 990px;
+	margin-top:10px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+a:visited{
+	color:blue;
+}
+#header{
+	height:110px;
+}
+.logo{
+	position:absolute;
+	height:100px;
+	width:200px;
+	background-color:red;
+}
+h1{
+	position:absolute;
+	left:230px;
+	width:600px;
+	padding-top:30px;
+	font-size:20px;
+	font-weight:normal;
+}
+#buscador{
+	position:absolute;
+	top:60px;
+	left:210px;
+	width:780px;
+	height:40px;
+	background-color:yellow;
+}
+#buscador input{
+	width:80px;
+	height:25px;
+	margin-top:7px;
+	margin-left:7px;
+}
+#buscador #entrada-buscador{
+	width:660px;
+}
+
+.publica-anuncio-gratis{
+	position:absolute;
+	right:20px;
+	top:20px;
+	padding-right:20px;
+	background-color:red;
+	font-size:20px;
+	padding:10px;
+}
+#content{
+	margin-top:10px;
+	clear:both;
+	min-height:300px;
+}
+#navegacion ul{
+	list-style: none;
+}
+#navegacion ul li{
+	display: inline;
+}
+.lateral{
+	background-color:pink;
+	border: 1px solid black;
+	width:198px;
+	float:left;
+	text-align:center;
+	margin-right:10px;
+	padding-bottom:10px;
+}
+.lateral h4{
+	border-bottom: 1px solid black;
+}
+.lateral p{
+	margin-top:10px;
+	margin-left:10px;
+	text-align:left;
+}
+.clasificados{
+	float:left;
+	width: 780px;
+}
+.clasificados ul{
+	list-style: none;
+}
+.clasificados ul li{	
+	position:relative;
+	padding-left:100px;
+	padding-right:80px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.clasificados ul li .thumbnail{
+	position:absolute;
+	left:0px;
+}
+.lista-provincias{
+	margin-top:10px;
+}
+.lista-provincias li{
+	list-style:none;
+	float:left;
+	width:95px;
+	height:20px;
+	font-size:12px;
+}
+.contenedor-categorias{
+	float:left;
+	width:250px;
+	margin-left:10px;
+}
+.categoria{
+	margin-bottom:10px;
+}
+.titulo-categoria{
+	background-color:yellow;
+	position:relative;
+	height:40px;
+}
+.titulo-categoria h2{
+	margin-left:40px;
+	padding-top:10px;
+	font-size:14px;
+}
+.cantidad{
+	text-align:right;
+	position:absolute;
+	top:12px;
+	right:10px;
+	font-size:12px;
+}
+.categoria ul li{
+	background-color:orange;
+	list-style:none;
+	width:250px;
+	border-bottom: 1px solid grey;
+}
+.categoria ul li a:hover{
+	font-weight:bold;
+	text-decoration:none;
+}
+#footer{
+	clear:both;
+	height:50px;
+	background-color:red;
+}
