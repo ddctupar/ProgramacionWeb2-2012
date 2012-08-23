@@ -1,9 +1,0 @@
-git status: vemos que archivos tenemos
-
-git add "nombre del archivo": Subimos el archivo
-
-git reset head "nombre archivo":  para que no agregue un archivo
-
-
-
-
