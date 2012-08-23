@@ -1,1 +1,17 @@
-hola
+para ver que tengo: git status
+
+para agregarlo: git add "nombre archivo"
+
+para no agregar uno: git reset head "nombre archivo"
+
+ayuda: git --help
+
+commit con un mensaje: git commit -m "archivo de prueba con mi nombre"
+
+traer los cambios: git pull
+
+finalmente: git push
+
+para ver un log: git log
+
+para agregar todo: git add -A
