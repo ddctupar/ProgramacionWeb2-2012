@@ -1,0 +1,157 @@
+@CHARSET "ISO-8859-1";
+*{
+	margin:0;
+	padding:0;
+}
+#container{width: 990px;
+           margin-left: auto;
+           margin-right: auto;
+           background-color: green;
+}
+#superior{
+	padding-bottom: 10px;
+	background-color: green;
+}
+#superior h1,h2{
+	text-align: center;
+}
+#superior h1{
+	padding-top: 10px;
+}
+#superior h2{
+	text-decoration: underline;
+	font-family: fantasy;
+	font-style: italic;
+}
+#superior img{
+	position: absolute;
+	top: 10px;
+	margin-left: 10px;
+}
+#barramenu{
+	background-color: green;
+	float: left;
+	height: 500px;
+	width: 150px;
+
+}
+.menuvertical{
+	position:relative;
+	list-style: none;
+	top:40px;
+}
+.menuvertical li{
+	height: 40px;
+	display: block;
+	background-color:#2F0404;
+	margin-bottom: 10px;
+	text-align: center;
+	
+}
+.menuvertical li a{
+	position: relative;
+	top: 10px;
+	color: white;
+}
+#portada{
+	margin-bottom: 10px;
+}
+#contenido{
+	background-image: url("../imagenes/hojas-verdes.png");
+	margin-top: 10px;
+	background-color:green;
+	min-height: 500px;
+	text-align: center;
+	float: left;
+	width: 840px;
+	padding-bottom: 10px;
+}
+#contenido p{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#contenido h2{
+	text-align: left;
+	color:teal;
+	text-decoration:underline;
+	font-family:fantasy;
+	margin-left: 10px;
+}
+#lista-exposiciones{
+	list-style: none;
+}
+#lista-exposiciones li{
+	display: block;
+	width: 840px;
+}	
+#lista-fotos{
+	width: 840px;
+}
+#lista-fotos li{
+	display: inline;
+}
+#lista-productos li{
+	display: inline;
+
+}
+#lista-productos li img{
+	border: 2px solid white;
+}
+
+#footer{
+	background-color:green;
+	clear:both;
+	height: 50px;
+	text-align: center;
+	padding-top: 10px;
+}
+#contenido_de_contacto{
+	background-image:url("../imagenes/fondo_contacto.png");
+	height: 500px;
+	text-align: center;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+#formulario{
+	color: white;
+	width:500px;
+	padding-top:100px;
+	background-image: "imagenes/X-S3";
+}
+#nombre-formulario{
+float: left;
+width: 100px;
+text-align: right;
+}
+
+#datos-formulario{
+text-align: left;
+}
+
+.horizlinks{position:relative;
+			top: 50px;
+			left: 70px;
+}
+.horizlinks li{
+display: inline;
+margin: 0px 10px 0px 0px;
+list-style-type: none;
+color: black;
+}
+#leftnav{width: 250px;
+		float: left;
+		min-height; 
+}
+#header{position: relative;
+		height: 100px;
+		width : 900px;
+		background-color:green;
+		color:white;
+		border-bottom: 1px solid black;
+		
+}
+
+
+#header a{font-color #000000;}
+#header a:hover{font-color: #ffffff;}
+#header a:visited{;}
