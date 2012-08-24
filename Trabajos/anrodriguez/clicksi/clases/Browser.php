@@ -4,7 +4,7 @@ require_once 'config.php';
 /**
  * Visualizar resultSet en tablas.
  *
- * @author Alberto N. Rodriguez <alberto.rodriguez@newportsoftware.com.ar>
+ * @author Alberto N. Rodriguez <anrodriguez@live.com.ar>
  */
 class Browser {
     private $resulSet;
