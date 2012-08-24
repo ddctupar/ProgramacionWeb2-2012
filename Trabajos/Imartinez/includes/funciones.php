@@ -5,6 +5,7 @@ function fecha_actual(){
     $fecha[0]=strtoupper($fecha[0]);//pongo en mayusculas la primer letra
     return $fecha;//devuelve un string del estilo "Martes, 03 de julio de 2012"
 } 
+/*
 function agregar_class_current($link){//ejemplo: agregar_class_current("index.php") o agregar_class_current("index.php, home.php, inicio.php")
 	$directorio="/estudioargeri/"; //directorio actual
 	$url=$_SERVER['REQUEST_URI'];
@@ -15,4 +16,5 @@ function agregar_class_current($link){//ejemplo: agregar_class_current("index.ph
     if ($nombre_archivo=="$directorio$valor") echo 'class="current"';
 	}	
 }
+*/
 ?>
