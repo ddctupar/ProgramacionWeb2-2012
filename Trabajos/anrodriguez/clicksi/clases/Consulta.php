@@ -1,16 +1,16 @@
 <?php
 
 class Consulta {
-	private $id			= null;
+	private $id             = null;
 	private $razonSocial	= null;
 	private $email			= null;
 	private $telefono		= null;
 	private $localidad		= null;
-	private $motivo		= null;
-	private $comentario	= null;
+	private $motivo         = null;
+	private $comentario     = null;
 	private $fechaIngreso	= null;
 	private $fechaEgreso	= null;
-	private $estado		= null;
+	private $estado         = null;
 	
 	public function Consulta() {
 	}
