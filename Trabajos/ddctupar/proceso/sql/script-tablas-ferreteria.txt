@@ -1,0 +1,53 @@
+CREATE TABLE producto (
+  id_producto INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  precio FLOAT NOT NULL,
+  imagen VARCHAR(100) NOT NULL,
+  descripcion TEXT NOT NULL,
+  categoria VARCHAR(100) NULL,
+idcategoria INTEGER NULL,
+  PRIMARY KEY(id_producto)
+);
+
+CREATE TABLE cliente (
+  id_cliente INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  apellido VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  username VARCHAR(100) NOT NULL,
+  pass VARCHAR(255) NOT NULL,
+  fecha_registro DATE NOT NULL,
+  PRIMARY KEY(id_cliente)
+);
+
+CREATE TABLE carrito (
+  idcarrito INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  producto_id_producto INTEGER UNSIGNED NOT NULL,
+  total_producto FLOAT NOT NULL,
+  cantidad INTEGER UNSIGNED NOT NULL,
+  fecha DATE NOT NULL,
+  PRIMARY KEY(idcarrito, producto_id_producto),
+  FOREIGN KEY(producto_id_producto)
+    REFERENCES producto(id_producto)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);
+
+CREATE TABLE compra (
+  idcompra INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  cliente_id_cliente INTEGER UNSIGNED NOT NULL,
+  carrito_idcarrito INTEGER UNSIGNED NOT NULL,
+  carrito_producto_id_producto INTEGER UNSIGNED NOT NULL,
+  fecha DATE NOT NULL,
+  hora TIME NOT NULL,
+  PRIMARY KEY(idcompra, cliente_id_cliente),
+  FOREIGN KEY(carrito_idcarrito, carrito_producto_id_producto)
+    REFERENCES carrito(idcarrito, producto_id_producto)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE,
+  FOREIGN KEY(cliente_id_cliente)
+    REFERENCES cliente(id_cliente)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);
+
