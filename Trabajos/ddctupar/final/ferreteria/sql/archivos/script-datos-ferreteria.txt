@@ -1,0 +1,9 @@
+INSERT INTO producto (id_producto,nombre,precio,imagen,descripcion)
+
+VALUES
+
+('1','Agujereadora',844.88,'imagenes/agujereadora.jpg','Taladro mecanico...'),
+('2','Amoladora',1230.78,'imagenes/amoladora.jpg','Con discos incluidos...'),
+('3','Llave Inglesa',555.32,'imagenes/llave inglesa.jpg','De las buenas...'),
+('4','Pala Pico',399.99,'imagenes/pala pico.jpg','De jardin...'),
+('5','Trompo',1889.99,'imagenes/trompo.jpg','Profesional...');

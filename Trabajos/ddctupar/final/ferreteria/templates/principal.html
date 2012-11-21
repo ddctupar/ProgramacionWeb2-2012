@@ -1,0 +1,252 @@
+<!-- INCLUDE ./templates/encabezado.html -->
+
+
+<center>
+		<div id='container'>
+        		
+               <table  id="tablacentral" width="1200" border="0">
+ 				 	<tr>
+   					 <td class="frameizq"  width="20%" valign="top">
+                     	<ul>
+						
+                        <!-- BEGIN categorias -->
+                        <div id='categorias'>
+                        <li><a href='index.php?nombrecategoria={tipo}'>{tipo}</a></li>
+                        </div>
+                        <!-- END categorias -->
+                        									
+						</ul>	
+                     </td>
+                     
+                     <!-- ***********************************************************-->
+                     
+    				<td class="framecentral" width="60%" align="center">
+                    
+                    <ul  id="productosdestacados">
+                    <!-- BEGIN administrador -->
+                    <div id="administrador">
+                    {Titulo}
+                    <form action='php/administrador.php' method='post' name='admin' onSubmit='return validarFormularioAdministrador(this)'>
+                    <table width="710" border="1" >
+  						<tr>
+                        	<td>Item</td>
+    						<td>NombreProducto</td>
+    						<td>Precio</td>
+    						
+    						<td>Descripcion</td>
+    						<td>Categoria</td>
+  						</tr>
+                        <!-- BEGIN administradorlistaproductos -->
+  						<tr>
+    						<td><input id='items' name='item' type='checkbox' value='{admincodigo}' /></td>
+    						<td>{adminnombre}</td>
+    						<td>{adminprecio}</td>
+    						
+    						<td width="40%">{admindescripcion}</td>
+                            <td>{admincategoria}</td>
+  						</tr>
+                        <!-- END administradorlistaproductos -->
+                        
+					</table>
+                    	<input align='middle' name='edit' type='submit' value='Editar'>
+                        <input align='middle' name='delete' type='submit' value='Borrar'>
+                        <input align='middle' name='insert' type='submit' value='Insertar'>
+                        <input align='middle' name='enviacompras'  title='Envia un correo electronico a cada usuario con el total de las compras del dia de la fecha' type='submit' value='EnviarComprasMailList'>
+                    </form>
+                    </div>
+                    <!-- END administrador -->
+                    <!-- BEGIN administradorEditar -->
+                    <div id="editarimagen">
+                    <img src='{image}' title="{desc}" width='200' height='100'></img>
+                    <form method="POST" action="php/administrador.php" enctype="multipart/form-data">
+						<div class="estilo_divs">Archivo: <input type="file" name="archivo" size=50></div>
+						<div class="estilo_divs"><input type="submit" value="Subir" name="boton_enviar"></div>
+                        <input id='items' name='item' type="hidden" value='{id}' />
+					</form>
+                    </div>
+                    <div id="administradorEditar">
+                    <a style="float:right" href='php/cierraventanaedicionadmin.php'><img src="/xampp/ferreteria/imagenes/close.gif"  width='20' height='20'></img></a><br>
+                    Seccion Administrador -EDITAR DATOS DEL ITEM-
+                    <form action='php/administrador.php' method='post' name='administrador' enctype="multipart/form-data" onSubmit='return validarFormulario(this)'> 
+            				<input name='productname'  size="70" value='{productname}' type='text'> Nombre <br>
+                            <input name='productprice' size="70" value='{productprice}' type='text'> Precio $<br>
+                            <input name='productcategory' size="70" value='{productcategory}' type='text'> Categoria <br>
+                            <input name='productdescription' size="70" value='{productdescription}' type='text' > Descripcion <br>
+                			                   
+                			<input id='items' name='item' type="hidden" value='{id}' />
+                            <input id='idproduct' name='editarfinal' type="hidden" value='{id}' />
+                        	<input align='middle' name='send' type='submit' value='Editar'>
+                        	
+					</form>
+                    </div>
+                    <!-- END administradorEditar -->
+                    <!-- BEGIN administradorInsertar -->
+                    <div id="editarimagen">
+                    
+                    </div>
+                    <div id="administradorEditar">
+                    <a style="float:right" href='php/cierraventanaedicionadmin.php'><img src="/xampp/ferreteria/imagenes/close.gif"  width='20' height='20'></img></a><br>
+                    Seccion Administrador -EDITAR DATOS DEL ITEM-
+                    Una vez insertado el nuevo producto ve a la seccion de edicion para cargar una imagen
+                    <form action='php/administrador.php' method='post' name='administrador' enctype="multipart/form-data" onSubmit='return validarFormulario(this)'> 
+            				<input name='productname'  size="70" type='text'> {productname} <br>
+                            <input name='productprice' size="70" type='text'> Precio $<br>
+                            <input name='productcategory' size="70" type='text'> Categoria <br>
+                            <input name='productdescription' size="70" type='text' > Descripcion <br>
+                			                   
+                			<input id='items' name='item' type="hidden" value='{id}' />
+                            <input id='insertarfinals' name='insertarfinal' type="hidden" value='1' />
+                        	<input align='middle' name='insertarend' type='submit' value='Insertar'>
+                        	
+					</form>
+                    </div>
+                    <!-- END administradorInsertar -->
+                    <!-- BEGIN registrar -->
+                    {haber}
+                    <div><br /></div>
+                     	<div id='login'>
+        					<form action='php/registrar.php' method='post' name='login' onSubmit='return validarRegistro(this)'> 
+            				<input name='clienteusername' type='text'> Usuario
+                			<input name='clientepassword' type='password'>Contraseña <br>
+                            <input name='clientenombre' type='text'>Nombre <br>
+                            <input name='clienteapellido' type='text'>Apellido <br>
+                            <input name='clienteemail' type='text'><br>Email <br>
+                			
+                        	<input align='middle' name='registrarse' type='submit' value='Registrarse'>
+                        	
+							</form>
+						</div>
+                        <div><br /></div>
+                        <p>Luego de hacer click seras redirigido hacia la pagina principal y alli podras ingresar con tu usuario y tu contraseña. </p>
+                    <!-- END registrar -->
+                    <!-- BEGIN productos -->				
+					<li>
+                    <div id='producto'>
+                		<div class='tituloproducto'>{nombre}
+                        </div>
+                        <div class='imagenproducto'>
+                        	<a href='#'><img src='{imagenproducto}' title="{desc}" width='200' height='100'></img></a>
+                        </div>
+                        <div >
+                        <form method='post' action='php/agregalistado.php'>
+						    <table class='seccioncompra' border='0'>
+  								<tr>
+   								 	<td >Codigo: </td>
+  								 	<td>{codigo}</td>
+									<input name='idproducto' type='hidden' value='{codigo}'>
+                                    <input name='idcategoria' type='hidden' value='{idcategoria}'>
+                                    <input name='precio' type='hidden' value='{precio}'>
+ 							   </tr>
+                                
+                               <tr>
+   								 	<td>Precio</td>
+  								 	<td>${precio}</td>
+ 							   </tr>
+								<tr>
+   								 	<td>
+                                    <input name='enviar'   value='Elegir' title='Seleccione para cargar al carrito de compras' type='submit' />
+                                    </td>
+  								 	<td>
+                                    <select name='cantidad' id='cantidad'>
+                	                
+                                                        	                    <option value='1'   >
+                	                      1               	                        </option>
+                	                                    	                    <option value='2' >
+                	                      2               	                        </option>
+                	                                    	                    <option value='3' >
+                	                      3               	                        </option>
+                	                                    	                    <option value='4' >
+                	                      4               	                        </option>
+                	                                    	                    <option value='5' >
+                	                      5               	                        </option>
+                	                                    	                    <option value='6' >
+                	                      6               	                        </option>
+                	                                    	                    
+                	                      
+                	                                  	                    </select></td>
+ 								 	</tr>
+							</table>
+                        	</form>
+                        </div>
+                        </div>
+                	</li>
+                <!-- END productos -->
+                
+                <!-- BEGIN fact -->
+                <div id="factura">
+                Articulos comprados al dia de la fecha: {facturafecha}
+                <!-- BEGIN factcompra -->
+                	<li>Cantidad:{facturacantidad}--Articulo:{facturanombreproducto}--PrecioUnitario:${facturapreciounitario}--TotalParcial:${facturaprecio}
+                    </li>
+                <!-- END factcompra -->
+                
+                Total:${facturapreciototal}<br />
+                Se envia un email al finalizar el dia con el detalle del pedido a la fecha.
+                </div>
+                <!-- END fact -->
+                
+                </ul>
+                </td>
+   					 <td class="frameder" width="20%" valign="top">
+                     <ul>
+                <!-- BEGIN noregistrado -->
+					 <div id='login'>
+        			<form action='php/login.php' method='post' name='login' onSubmit='return validarLogin(this)'> 
+            			<input name='username' type='text'> Usuario
+                		<input name='password' type='password'>Contraseña <br>
+                		<input align='middle' name='login' type='submit' value='Ingresar'>
+                        
+                        <input name='{username}' type='hidden'>
+					</form>
+                    <form action='php/login.php' method='post' name='login'>
+                    <input align='middle' name='registrarse' type="submit" value='Registrarse'>
+                    </form>
+					</div>									
+					</ul>	
+                <!-- END noregistrado -->
+                
+                <!-- BEGIN registrado -->
+					 <div id='login'>
+        				Hola {nombrecliente}<br />
+                    	<a class='close_sesion' href='php/logout.php'>Cerrar Sesion</a>
+					</div>	
+                
+                
+                
+                
+                    <!-- BEGIN car -->
+                    <div id='carrito'>
+						<form name='car' action='php/procesarcompra.php' method='post' >
+							<ul>
+                            	<!-- BEGIN listado -->
+								<li>
+								<input id='items' name='item' type='checkbox' value='{listadoidproducto};{listadocantidad}' />-{listadocantidad}-{listadonombreproducto}-${listadoprecio}
+                                </li>
+                                <!-- END listado -->
+							</ul>
+						Llevas cargados ${listadopreciototal} <br></br>
+						<input type='submit' name='cmdForm' value='Eliminar item' title="Seleccionar de a uno por vez para eliminar" onclick='return Eliminar(this)'  />
+						<input type='submit' name='cmdForm' value='Comprar todo' title="Comprar todos los items del listado" onclick='return Comprar(this)' />
+						</form>
+					</div>
+                    <!-- END car -->
+                <!-- END registrado -->
+                	</ul>
+                     </td>
+ 			</tr>
+			</table>
+
+		
+					
+				
+		
+					
+				
+			
+		</div>
+</center>
+
+
+
+
+<!-- INCLUDE ./templates/footer.html -->

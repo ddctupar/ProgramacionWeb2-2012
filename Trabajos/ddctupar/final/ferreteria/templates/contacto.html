@@ -1,0 +1,15 @@
+<!-- INCLUDE ./templates/encabezado.html -->
+<center>
+<div id='contacto'>
+	<form action="php/contacto.php" method="post" onSubmit="return validarFormulario(this)" >
+    <ul>
+    	<li>Nombre y Apellido.<br /><input name="nombre" type="text" size="50" /></li>
+    	<li>Correo Electronico.<br /><input name="correo" type="text" size="60"  /></li>
+   		<li>Comentario.</li>
+    	<li><textarea name="comentario" cols="60" rows="7">Escriba aqui su comentario</textarea></li>
+    	<li><input name="enviar"  value="Enviar" title="Enviar" type="submit" /></li>
+    </ul>
+    </form>
+</div>
+</center>
+<!-- INCLUDE ./templates/footer.html -->

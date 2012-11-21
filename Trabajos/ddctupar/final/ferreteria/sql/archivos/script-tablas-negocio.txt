@@ -1,0 +1,52 @@
+CREATE TABLE producto (
+  id_producto INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  precio FLOAT NOT NULL,
+  imagen VARCHAR(100) NOT NULL,
+  descripcion TEXT NOT NULL,
+  PRIMARY KEY(id_producto)
+);
+
+CREATE TABLE cliente (
+  id_cliente INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  apellido VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  username VARCHAR(100) NOT NULL,
+  pass VARCHAR(255) NOT NULL,
+  fecha_registro DATE NOT NULL,
+  administrador BOOL NULL,
+  PRIMARY KEY(id_cliente)
+);
+
+CREATE TABLE categoria (
+  id_categoria INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  producto_id_producto INTEGER UNSIGNED NOT NULL,
+  tipo VARCHAR(100) NULL,
+  PRIMARY KEY(id_categoria),
+  FOREIGN KEY(producto_id_producto)
+    REFERENCES producto(id_producto)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE compra (
+  id_compra INTEGER UNSIGNED NOT NULL,
+  cliente_id_cliente INTEGER UNSIGNED NOT NULL,
+  producto_id_producto INTEGER UNSIGNED NOT NULL,
+  cantidad INTEGER UNSIGNED NULL,
+  precio_unitario FLOAT NULL,
+  precio_total FLOAT NULL,
+  comprado BOOL NULL,
+  fecha DATE NULL,
+  PRIMARY KEY(id_compra),
+  FOREIGN KEY(producto_id_producto)
+    REFERENCES producto(id_producto)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(cliente_id_cliente)
+    REFERENCES cliente(id_cliente)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
